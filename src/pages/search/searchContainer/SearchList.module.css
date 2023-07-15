@@ -1,0 +1,48 @@
+.container {
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  padding: 0 2rem;
+  color: #fff;
+  margin-bottom: 60vh;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.listMovie {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0 1rem 4rem;
+  gap: 1rem;
+  list-style: none;
+  /* overflow-x: hidden; */
+}
+.showMov {
+  margin-bottom: 60vh;
+}
+.img {
+  height: 20rem;
+  width: auto;
+  transition: transform ease-in 0.4s;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+.loading,
+.error,
+.noMovie {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 2rem;
+  font-style: italic;
+}
+.loading {
+  color: rgba(255, 255, 255, 0.518);
+}
+.error {
+  color: red;
+}

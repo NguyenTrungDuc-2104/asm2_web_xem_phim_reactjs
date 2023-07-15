@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0 1rem 2rem 1rem;
+
+  position: relative;
+}
+
+.container::-webkit-scrollbar {
+  height: 0.5em;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.851);
+  border-radius: 10rem;
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 10rem;
+}
+
+.backdrop {
+  height: 13rem;
+}
+.poster {
+  height: 20rem;
+  /* overflow: hidden; */
+}
+
+.loading {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error {
+  color: red;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

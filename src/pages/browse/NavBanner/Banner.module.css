@@ -1,0 +1,64 @@
+.container {
+  height: 30rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.content {
+  /* background-color: aquamarine; */
+  width: 25vw;
+
+  position: absolute;
+  bottom: 5rem;
+  left: 2rem;
+  color: #fff;
+}
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.btn {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 0.8rem;
+}
+.btn button {
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: black;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+}
+
+.overview {
+  font-size: 1rem;
+  font-weight: 500;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loading {
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.error {
+  color: red;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

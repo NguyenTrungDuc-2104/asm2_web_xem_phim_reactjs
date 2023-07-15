@@ -1,0 +1,16 @@
+.container {
+  margin: 0 auto 0 auto;
+  max-width: 98vw;
+  position: relative;
+}
+.showMov {
+  margin-bottom: 60vh;
+}
+.content h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.poster {
+  margin-bottom: 6rem;
+}

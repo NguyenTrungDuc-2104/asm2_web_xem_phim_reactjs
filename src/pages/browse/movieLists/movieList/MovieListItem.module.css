@@ -1,0 +1,8 @@
+.img {
+  transition: transform 0.3s ease-in;
+  height: 100%;
+  padding-bottom: 2.5rem;
+}
+.img:hover {
+  transform: scale(1.1);
+}
