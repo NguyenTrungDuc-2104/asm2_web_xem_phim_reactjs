@@ -7,7 +7,6 @@ const MovieListItem = (props) => {
 
   //---truyền data movie mà người dùng nhấn vào tới context ShowMovieProvider---
   const showMovieHandler = () => {
-    // console.log(props.dataMovie);
     showMovieCtx.showMovieHandler(props.dataMovie);
   };
 

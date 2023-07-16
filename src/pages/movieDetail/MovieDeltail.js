@@ -1,9 +1,28 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ShowMovieContext } from "../../store/ShowMovieProvider";
+import { FaXmark } from "react-icons/fa6";
 import styles from "./MovieDeltail.module.css";
 
 const MovieDeltail = () => {
   const showMovieCtx = useContext(ShowMovieContext);
+
+  //-------------hidden movie-------------
+  useEffect(() => {
+    const hidenMoiveByKey = (e) => {
+      if (e.key === "Escape") {
+        showMovieCtx.resetShowMovieHandler();
+      }
+    };
+    document.addEventListener("keydown", hidenMoiveByKey);
+
+    return () => {
+      document.removeEventListener("keydown", hidenMoiveByKey);
+    };
+  }, []);
+  //-----------------------------
+  const hidenMovieHandler = () => {
+    showMovieCtx.resetShowMovieHandler();
+  };
   //---check hiển thị video hay backdrop---
   let video;
   if (showMovieCtx.dataMovieRequest.key && !showMovieCtx.dataMovieError) {
@@ -39,6 +58,9 @@ const MovieDeltail = () => {
     }
     content = (
       <div className={styles.containerMov}>
+        <div className={styles.icon_x}>
+          <FaXmark onClick={hidenMovieHandler} />
+        </div>
         <div className={styles.inforMov}>
           <h1>{nameMovie}</h1>
           <div>

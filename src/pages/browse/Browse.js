@@ -6,6 +6,7 @@ import MovieDeltail from "../movieDetail/MovieDeltail";
 
 const Browse = () => {
   const showMovieCtx = useContext(ShowMovieContext);
+
   return (
     <React.Fragment>
       <NavBanner />
