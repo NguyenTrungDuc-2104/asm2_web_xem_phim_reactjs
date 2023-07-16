@@ -9,7 +9,7 @@ const ShowMovieContext = createContext({
   dataMovieLoading: false,
   dataMovieError: null,
   showMovieHandler: () => {},
-  searchMovieHandler: () => {},
+  resetShowMovieHandler: () => {},
 });
 //--------------------------------------------------------------------------------
 const ShowMovieProvider = (props) => {
@@ -23,6 +23,7 @@ const ShowMovieProvider = (props) => {
     error: dataMovieError,
     sendRequest,
   } = useHttp();
+
   //---xử lý data movie mà người dùng nhấn chọn---
   const showMovieHandler = (data) => {
     //---check xem movie đó đã được chọn trước đó hay chưa---
@@ -66,8 +67,8 @@ const ShowMovieProvider = (props) => {
       setShowMovie(false);
     }
   };
-  //---dùng để reset khi người dùng nhấn search movie mới hoặc reset---
-  const searchMovieHandler = () => {
+  //---dùng để reset---
+  const resetShowMovieHandler = () => {
     setIdMovie([]);
     setDataMovie({});
     setDataMovieRequest({});
@@ -83,7 +84,7 @@ const ShowMovieProvider = (props) => {
         dataMovieLoading,
         dataMovieError,
         showMovieHandler,
-        searchMovieHandler,
+        resetShowMovieHandler,
       }}
     >
       {props.children}

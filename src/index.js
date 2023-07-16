@@ -14,9 +14,4 @@ root.render(
       </ShowMovieProvider>
     </RequestAPIProvider>
   </React.StrictMode>
-  // <RequestAPIProvider>
-  //   <ShowMovieProvider>
-  //     <App />
-  //   </ShowMovieProvider>
-  // </RequestAPIProvider>
 );

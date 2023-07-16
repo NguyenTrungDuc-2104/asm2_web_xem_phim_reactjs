@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ShowMovieContext } from "../../store/ShowMovieProvider";
 import styles from "./MovieDeltail.module.css";
+
 const MovieDeltail = () => {
   const showMovieCtx = useContext(ShowMovieContext);
   //---check hiển thị video hay backdrop---

@@ -16,13 +16,13 @@ const SearchForm = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     searchCtx.searchHandler(searchValue);
-    showMovieCtx.searchMovieHandler();
+    showMovieCtx.resetShowMovieHandler();
   };
   //---reset---
   const resetHandler = () => {
     setSearchValue("");
     searchCtx.searchHandler("");
-    showMovieCtx.searchMovieHandler();
+    showMovieCtx.resetShowMovieHandler();
   };
   return (
     <form className={styles.formControl} onSubmit={submitHandler}>
